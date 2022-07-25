@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Expanded(child: SizedBox()),
                                   GestureDetector(
-                                  onLongPress:(){
+                                  onTap:(){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail(
                             name:ans.Ans[index].fullName, image: ans.Ans[index].image,
                             description: ans.Ans[index].description,
