@@ -1,4 +1,4 @@
-import 'package:anime/feature/search_anime_character/presentation/bookmarked.dart';
+import 'package:anime/feature/BookMarked/presentation/bookmarked.dart';
 import 'package:anime/feature/search_anime_character/presentation/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';

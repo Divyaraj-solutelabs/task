@@ -1,6 +1,6 @@
 import 'package:anime/feature/search_anime_character/Store/result.dart';
 import 'package:anime/feature/search_anime_character/detail/detail.dart';
-import 'package:anime/feature/search_anime_character/presentation/bookmarked.dart';
+import 'package:anime/feature/BookMarked/presentation/bookmarked.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
