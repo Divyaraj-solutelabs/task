@@ -1,4 +1,4 @@
-import 'package:anime/feature/BookMarked/bookmarked/hivedb.dart';
+import 'package:anime/feature/BookMarked/database/hivedb.dart';
 import 'package:anime/feature/search_anime_character/model/model.dart';
 import 'package:anime/feature/search_anime_character/network_service/graph_ql.dart';
 import 'package:hive/hive.dart';
