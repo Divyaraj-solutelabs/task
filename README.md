@@ -4,13 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a for Searching the Anime Characters and Storing the Bookmarked Characters 
+into the Local Storage.
+    Packages Used are:
+        State Management-
+            mobx
+            mobx_flutter
+        Local Device Storage-
+            hive
+            hive_flutter
+        For GraphQl-
+            graphql_flutter
+        
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Github Link for this Project:- [https://github.com/Divyaraj-solutelabs/task]

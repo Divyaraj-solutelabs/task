@@ -3,7 +3,7 @@ import 'package:anime/feature/search_anime_character/presentation/homeScreen.dar
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'feature/search_anime_character/bookmarked/hivedb.dart';
+import 'feature/BookMarked/database/hivedb.dart';
 import 'package:path_provider/path_provider.dart' as PathProvider;
 
 
