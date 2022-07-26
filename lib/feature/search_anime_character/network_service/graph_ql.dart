@@ -1,5 +1,5 @@
 import 'package:anime/feature/search_anime_character/model/model.dart';
-import 'package:anime/feature/search_anime_character/util/util.dart';
+import 'package:anime/util/util.dart';
 import 'package:graphql/client.dart';
 
 const baseURL="https://graphql.anilist.co";

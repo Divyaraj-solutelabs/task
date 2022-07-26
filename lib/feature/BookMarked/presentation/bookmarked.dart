@@ -1,5 +1,5 @@
 import 'package:anime/feature/search_anime_character/Store/result.dart';
-import 'package:anime/feature/search_anime_character/detail/detail.dart';
+import 'package:anime/util/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 

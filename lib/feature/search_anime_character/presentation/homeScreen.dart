@@ -1,5 +1,5 @@
 import 'package:anime/feature/search_anime_character/Store/result.dart';
-import 'package:anime/feature/search_anime_character/detail/detail.dart';
+import 'package:anime/util/detail.dart';
 import 'package:anime/feature/BookMarked/presentation/bookmarked.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -93,12 +93,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Expanded(child: SizedBox()),
                                   GestureDetector(
                                   onTap:(){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail(
-                            name:ans.Ans[index].fullName, image: ans.Ans[index].image,
-                            description: ans.Ans[index].description,
-
-
-                          )));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                                          Detail(
+                                            name:ans.Ans[index].fullName,
+                                            image: ans.Ans[index].image,
+                                            description: ans.Ans[index].description,
+                                          )
+                              )
+                            );
                         },
                                       child:Container(
                                     width: size.width,
