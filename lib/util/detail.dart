@@ -52,7 +52,7 @@ class Detail extends StatelessWidget{
           Expanded(
               flex: 1,
               child:Container(
-            padding: EdgeInsets.only(left: 10),
+            padding: EdgeInsets.only(left: 10,right: 10),
             alignment: Alignment.centerLeft,
             child: SingleChildScrollView(
                 child:Text(description,
