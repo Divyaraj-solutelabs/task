@@ -15,14 +15,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _controller = TextEditingController();
 
-
-
-
-
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
