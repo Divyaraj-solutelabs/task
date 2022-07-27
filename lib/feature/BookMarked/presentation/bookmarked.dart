@@ -66,11 +66,8 @@ class _BookmarkedState extends State<Bookmarked>{
                                       },
                                       child:Container(
                                         width: size.width,
-                                        color:Colors.deepPurpleAccent,
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 20),
-                                          child: Center(
+                                        color:Colors.transparent,
+                                        child:  Center(
                                             child: Row (
                                                 children:[
                                                   Expanded(child: ListTile(
@@ -78,6 +75,7 @@ class _BookmarkedState extends State<Bookmarked>{
                                                       ans.offlist[index].fullName,
                                                       style: TextStyle(
                                                         color: Colors.white,
+                                                        fontSize: 15,
                                                         fontWeight: FontWeight.w600,
                                                       ),
                                                     ),
@@ -87,14 +85,15 @@ class _BookmarkedState extends State<Bookmarked>{
                                                        ans.offlist.clear();
                                                        ans.getdata();
                                                         },
-                                                      icon: Icon(Icons.delete),
+                                                      icon: Icon(Icons.delete,
+                                                      color: Colors.white,),
                                                     ),
                                                   )
                                                   ),
                                                 ]
                                             ),
                                           ),
-                                        ),
+
                                       ),
                                     onLongPress: (){
                                         ans.delete(index);

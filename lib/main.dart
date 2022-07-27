@@ -47,6 +47,7 @@ class GraphQLApp extends StatelessWidget {
               color: Colors.black,
               fontSize: 5),
         ),
+
       ),
       home: HomeScreen(),
       initialRoute: HomeScreen.routeName,

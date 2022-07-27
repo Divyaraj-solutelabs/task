@@ -29,7 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
+    return Container(
+        constraints: const BoxConstraints.expand(),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage("https://wallpapercave.com/wp/wp5635132.png"), fit: BoxFit.cover)
+        ),
+        child:Scaffold(
         body: Material(
       child: Column(
         children: [
@@ -77,7 +83,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
 
                       itemBuilder: (context, index) {
-                        return Card(
+                        return GestureDetector(
+                            onTap:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                                  Detail(
+                                    name:ans.Ans[index].fullName,
+                                    image: ans.Ans[index].image,
+                                    description: ans.Ans[index].description,
+                                  )
+                              )
+                              );
+                            },
+                            child:Card(
                           elevation: 15,
                           child: Stack(
                             fit: StackFit.expand,
@@ -86,24 +103,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               Column(
                                 children: [
                                   Expanded(child: SizedBox()),
-                                  GestureDetector(
-                                  onTap:(){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                                          Detail(
-                                            name:ans.Ans[index].fullName,
-                                            image: ans.Ans[index].image,
-                                            description: ans.Ans[index].description,
-                                          )
-                              )
-                            );
-                        },
-                                      child:Container(
+                                  Container(
                                     width: size.width,
-                                    color:ans.Ans[index].color,
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 20),
-                                      child: Center(
+                                    color:Colors.transparent,
+                                    child:  Center(
                                         child:Row (
                                             children:[
                                           Expanded(child: ListTile(
@@ -112,26 +115,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w600,
+                                                fontSize:10
                                               ),
                                             ),
                                            trailing: IconButton(
                                              onPressed: (){
                                                ans.addChar(ans.Ans[index].id, ans.Ans[index].image, ans.Ans[index].fullName, ans.Ans[index].description);
                                              },
-                                             icon: Icon(Icons.bookmark_add),
+                                             icon: Icon(Icons.bookmark_add,
+                                             color: Colors.white,
+                                             ),
                                            ),
                                           )
                                           ),
                                             ]
                                         ),
                                       ),
-                                    ),
-                                  )),
+
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        );
+                        ));
                       },
                       itemCount: ans.Ans.length,
                     ),
@@ -150,6 +156,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         child: Icon(Icons.bookmark),
       ),
-    );
+    ));
   }
 }
